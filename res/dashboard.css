@@ -14,11 +14,12 @@
     --dark-medium-color:  #222222;
     --dark-low-color:     #cccccc;
     --dark-floor-color:   #000000;
+
+    color-scheme: light;
 }
 
 * {
     box-sizing: border-box;
-    color-scheme: light;
     cursor: default;
 }
 
@@ -247,11 +248,12 @@ header #welcome h2 {
     margin: 0;
     padding: 0;
     text-shadow: 0.07em 0.07em 0.1em rgba(0,0,0,0.5);
+    white-space: nowrap;
 }
 
 header #welcome h2 img {
     filter: drop-shadow(0.1em 0.1em 0.05em rgba(0,0,0,0.5));
-    margin-right: 0.2em;
+    margin-right: 0.1em;
     height: 1em;
     vertical-align: top;
     width: auto;

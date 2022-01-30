@@ -26,12 +26,14 @@ class Dashboard {
         this.darkMode.addEventListener('click', () => {
             this.darkMode.classList.add('off');
             this.lightMode.classList.remove('off');
+            document.documentElement.style.setProperty('color-scheme', 'dark');
             this.changeMode(this.dark);
         });
 
         this.lightMode.addEventListener('click', () => {
             this.lightMode.classList.add('off');
             this.darkMode.classList.remove('off');
+            document.documentElement.style.setProperty('color-scheme', 'light');
             this.changeMode(this.light);
         });
     }
