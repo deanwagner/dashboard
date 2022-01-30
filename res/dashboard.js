@@ -15,7 +15,15 @@ class Dashboard {
             'high-color',
             'medium-color',
             'low-color',
-            'floor-color'
+            'floor-color',
+            'aside-svg-shadow',
+            'aside-svg-glow',
+            'aside-text-shadow',
+            'aside-text-glow',
+            'action-svg-shadow',
+            'action-svg-glow',
+            'action-text-shadow',
+            'action-text-glow'
         ];
 
         keys.forEach(value => {
@@ -35,6 +43,12 @@ class Dashboard {
             this.darkMode.classList.remove('off');
             document.documentElement.style.setProperty('color-scheme', 'light');
             this.changeMode(this.light);
+        });
+
+        const h1 = document.getElementsByTagName('h1')[0];
+        const aside = document.getElementsByTagName('aside')[0];
+        h1.addEventListener('click', () => {
+            aside.classList.toggle('collapsed');
         });
     }
 

@@ -7,6 +7,15 @@
     --low-color:     #636262;
     --floor-color:   #000000;
 
+    --aside-svg-shadow:   0.1em 0.1em 0.1em rgba(0,0,0,1);
+    --aside-text-shadow:  0.1em 0.1em 0.1em rgba(0,0,0,0.8);
+    --aside-svg-glow:     0 0 0.3em var(--high-color);
+    --aside-text-glow:    0 0 0.2em var(--high-color);
+    --action-box-shadow:  0.2em 0.2em 0.2em rgba(0,0,0,0.3);
+    --action-text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,1);
+    --action-box-glow:    0 0 0.2em var(--special-color);
+    --action-text-glow:   0 0 0.1em var(--high-color);
+
     --dark-accent-color:  #eeb241;
     --dark-special-color: #2390cf;
     --dark-ceiling-color: #ffffff;
@@ -15,6 +24,18 @@
     --dark-low-color:     #cccccc;
     --dark-floor-color:   #000000;
 
+    --dark-aside-svg-shadow:   0.1em 0.1em 0.1em rgba(0,0,0,0.5);
+    --dark-aside-text-shadow:  0.1em 0.1em 0.1em rgba(0,0,0,0.3);
+    --dark-aside-svg-glow:     0 0 0.2em var(--dark-high-color);
+    --dark-aside-text-glow:    0 0 0.2em var(--dark-high-color);
+    --dark-action-box-shadow:  0.2em 0.2em 0.2em rgba(0,0,0,0.3);
+    --dark-action-text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.5);
+    --dark-action-box-glow:    0 0 0.2em var(--dark-special-color);
+    --dark-action-text-glow:   0 0 0.1em var(--dark-high-color);
+
+    --base-transition: all 0.3s  ease-out;
+    --fast-transition: all 0.15s ease-out;
+
     color-scheme: light;
 }
 
@@ -22,6 +43,10 @@
     box-sizing: border-box;
     cursor: default;
 }
+
+/* * * * * * * * *\
+ * Base Elements *
+\* * * * * * * * */
 
 html {
     margin: 0;
@@ -44,7 +69,7 @@ body {
 a, a *,
 button, button * {
     cursor: pointer;
-    transition: all 0.15s ease-out;
+    transition: var(--fast-transition);
 }
 
 a:link, a:visited {
@@ -65,23 +90,29 @@ button {
 svg {
     filter: drop-shadow(0.1em 0.1em 0.1em rgba(0,0,0,0.5));
     height: 1.5em;
-    transition: all 0.1s ease-out;
+    transition: var(--fast-transition);
     width: 1.5em;
 }
 
 svg path {
     fill: var(--accent-color);
-    transition: all 0.3s ease-out;
+    transition: var(--base-transition);
 }
+
+/* * * * * * * * *\
+ *  Navigation   *
+\* * * * * * * * */
 
 aside {
     background-color: var(--accent-color);
     color: var(--high-color);
-    text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.8);
+    text-shadow: var(--aside-text-shadow);
+    transition: var(--base-transition);
     width: 15em;
 }
 
 aside h1 {
+    cursor: pointer;
     position: sticky;
     margin: 0;
     padding: 0.5em 0 0.5em 0.5em;
@@ -89,8 +120,20 @@ aside h1 {
     white-space: nowrap;
 }
 
+aside h1 * {
+    cursor: pointer;
+}
+
 aside h1 svg {
     vertical-align: bottom;
+}
+
+aside h1:hover {
+    text-shadow: var(--aside-text-glow);
+}
+
+aside h1:hover svg {
+    filter: drop-shadow(var(--aside-svg-glow));
 }
 
 aside nav {
@@ -101,7 +144,7 @@ aside nav {
 aside nav a {
     display: block;
     padding: 0 2em 0.5em;
-    transition: all 0.1s ease-out;
+    transition: var(--fast-transition);
 }
 
 aside nav a:link,
@@ -113,20 +156,20 @@ aside nav a:visited {
 aside nav a:hover,
 aside nav a:focus,
 aside nav a:active {
-    color: var(--ceiling-color);
+    color: var(--high-color);
     text-decoration: none;
-    text-shadow: 0 0 0.3em var(--ceiling-color);
+    text-shadow: var(--aside-text-glow);
     transform: scale(1.1);
 }
 
 aside nav a:hover svg,
 aside nav a:focus svg,
 aside nav a:active svg {
-    filter: drop-shadow(0 0 0.3em var(--ceiling-color));
+    filter: drop-shadow(var(--aside-svg-glow));
 }
 
 aside svg {
-    filter: drop-shadow(0.1em 0.1em 0.1em rgba(0,0,0,1));
+    filter: drop-shadow(var(--aside-svg-shadow));
     vertical-align: middle;
 }
 
@@ -138,6 +181,32 @@ aside nav #settings {
     margin-top: 2em;
 }
 
+aside nav a span {
+    transition: var(--fast-transition);
+}
+
+aside.collapsed {
+    width: 4em;
+}
+
+aside.collapsed h1 {
+    padding: 0;
+    text-align: center;
+}
+
+aside.collapsed nav a {
+    padding: 0 0 2em;
+    text-align: center;
+}
+
+aside.collapsed span {
+    display: none;
+}
+
+/* * * * * * * * *\
+ *     Main      *
+\* * * * * * * * */
+
 main {
     align-items: stretch;
     background-color: var(--medium-color);
@@ -147,7 +216,7 @@ main {
 }
 
 main a svg {
-    transition: all 0.3s ease-out;
+    transition: var(--base-transition);
 }
 
 main a:hover svg,
@@ -162,6 +231,10 @@ main a:focus svg path,
 main a:active svg path {
     fill: var(--special-color);
 }
+
+/* * * * * * * * *\
+ *  Page Header  *
+\* * * * * * * * */
 
 header {
     background-color: var(--high-color);
@@ -179,6 +252,10 @@ header > div:last-child {
     align-items: flex-end;
 }
 
+/* * * * * * * * *\
+ *  Search Form  *
+\* * * * * * * * */
+
 header form {
     align-items: flex-start;
     background-color: var(--medium-color);
@@ -187,9 +264,9 @@ header form {
     display: flex;
     flex: 1;
     justify-content: flex-start;
-    margin: 1em;
+    margin: 1.5em;
     overflow: hidden;
-    padding: 0.5em;
+    padding: 0.4em;
 }
 
 header form button {
@@ -206,6 +283,10 @@ header form input {
     height: 2em;
 }
 
+/* * * * * * * * *\
+ *   Controls    *
+\* * * * * * * * */
+
 header #controls {
     margin: 1em;
 }
@@ -217,6 +298,12 @@ header #controls a:hover,
 header #controls a:focus,
 header #controls a:active {
     text-decoration: none;
+}
+
+header #controls a svg {
+    height: 2.2em;
+    margin-left: 1em;
+    width: 2.2em;
 }
 
 header #controls a.off,
@@ -237,6 +324,10 @@ header #controls a.off svg {
 header #controls a.off svg path {
     fill: var(--medium-color) !important;
 }
+
+/* * * * * * * * *\
+ * Header Title  *
+\* * * * * * * * */
 
 header #welcome {
     flex: 1;
@@ -259,6 +350,10 @@ header #welcome h2 img {
     width: auto;
 }
 
+/* * * * * * * * *\
+ *    Actions    *
+\* * * * * * * * */
+
 header #actions {
     margin: 0 1em 0 0;
 }
@@ -268,21 +363,26 @@ header #actions a:link,
 header #actions a:visited {
     background-color: var(--accent-color);
     border-radius: 1.5em;
-    box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.3);
+    box-shadow: var(--action-box-shadow);
     color: var(--high-color);
     display: inline-block;
     margin: 0;
-    padding: 0.5em 1em;
+    padding: 0.3em 0.8em;
     text-decoration: none;
-    text-shadow: 0.1em 0.1em 0.1em var(--floor-color);
+    text-shadow: var(--action-text-shadow);
 }
 
 header #actions a:hover,
 header #actions a:focus,
 header #actions a:active {
     background-color: var(--special-color);
-    text-shadow: 0 0 0.1em var(--ceiling-color);
+    box-shadow: var(--action-box-glow);
+    text-shadow: var(--action-text-glow);
 }
+
+/* * * * * * * * *\
+ *    Section    *
+\* * * * * * * * */
 
 section {
     display: flex;
@@ -332,6 +432,10 @@ section #primary article {
     justify-content: stretch;
 }
 
+/* * * * * * * * *\
+ *    Primary    *
+\* * * * * * * * */
+
 section #primary h4 img {
     filter: drop-shadow(0.1em 0.1em 0.05em rgba(0,0,0,0.8));
     height: 1em;
@@ -371,9 +475,13 @@ section #primary article a {
 }
 
 section #primary article svg {
-    height: 1em;
-    width: 1em;
+    height: 1.5em;
+    width: 1.5em;
 }
+
+/* * * * * * * * *\
+ *   Secondary   *
+\* * * * * * * * */
 
 section #secondary {
     flex: 1;
@@ -404,6 +512,10 @@ section #secondary p:last-child {
     border-bottom: none;
     padding-bottom: 0;
 }
+
+/* * * * * * * * *\
+ *  Page Footer  *
+\* * * * * * * * */
 
 footer {
     font-size: 0.7em;
