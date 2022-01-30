@@ -16,6 +16,9 @@
     --action-box-glow:    0 0 0.2em var(--special-color);
     --action-text-glow:   0 0 0.1em var(--high-color);
 
+    --dark-mode: 0;
+    --mobile-view: 0;
+
     --dark-accent-color:  #eeb241;
     --dark-special-color: #2390cf;
     --dark-ceiling-color: #ffffff;
@@ -528,7 +531,12 @@ footer {
 \* * * * * * * * */
 
 @media screen and (orientation: portrait) {
+    :root { --mobile-view: 1; }
     section { flex-direction: column; }
     section #primary > div { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); }
     section #secondary #javascript { margin-top: 1em; }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root { --dark-mode: 1; }
 }

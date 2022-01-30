@@ -31,6 +31,14 @@ class Dashboard {
             this.dark[value]  = getComputedStyle(document.documentElement).getPropertyValue('--dark-' + value);
         });
 
+        const isDark = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--dark-mode'));
+        if (isDark) {
+            this.darkMode.classList.add('off');
+            this.lightMode.classList.remove('off');
+            document.documentElement.style.setProperty('color-scheme', 'dark');
+            this.changeMode(this.dark);
+        }
+
         this.darkMode.addEventListener('click', () => {
             this.darkMode.classList.add('off');
             this.lightMode.classList.remove('off');
@@ -45,11 +53,24 @@ class Dashboard {
             this.changeMode(this.light);
         });
 
-        const h1 = document.getElementsByTagName('h1')[0];
         const aside = document.getElementsByTagName('aside')[0];
+        window.addEventListener('resize', () => {
+            if (window.innerHeight >= window.innerWidth) {
+                aside.classList.add('collapsed');
+            } else {
+                aside.classList.remove('collapsed');
+            }
+        });
+
+        const h1 = document.getElementsByTagName('h1')[0];
         h1.addEventListener('click', () => {
             aside.classList.toggle('collapsed');
         });
+
+        const isMobile = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--mobile-view'));
+        if (isMobile) {
+            aside.classList.add('collapsed');
+        }
     }
 
     changeMode(colors) {
