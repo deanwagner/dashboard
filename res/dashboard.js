@@ -71,6 +71,14 @@ class Dashboard {
         if (isMobile) {
             aside.classList.add('collapsed');
         }
+
+        const datalist = document.getElementById('search-hints');
+        const links = document.getElementsByTagName('a');
+        for (let i = 0; i < links.length; i++) {
+            const option = document.createElement('option');
+            option.value = links[i].textContent.trim();
+            datalist.appendChild(option);
+        }
     }
 
     changeMode(colors) {

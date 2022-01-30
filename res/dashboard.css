@@ -534,6 +534,7 @@ footer {
     :root { --mobile-view: 1; }
     section { flex-direction: column; }
     section #primary > div { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); }
+    section #secondary { padding: 0; }
     section #secondary #javascript { margin-top: 1em; }
 }
 
