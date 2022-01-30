@@ -6,6 +6,14 @@
     --medium-color:  #e1e7ef;
     --low-color:     #636262;
     --floor-color:   #000000;
+
+    --dark-accent-color:  #eeb241;
+    --dark-special-color: #2390cf;
+    --dark-ceiling-color: #ffffff;
+    --dark-high-color:    #333333;
+    --dark-medium-color:  #222222;
+    --dark-low-color:     #cccccc;
+    --dark-floor-color:   #000000;
 }
 
 * {
@@ -238,6 +246,15 @@ header #welcome h2 {
     flex: 1;
     margin: 0;
     padding: 0;
+    text-shadow: 0.07em 0.07em 0.1em rgba(0,0,0,0.5);
+}
+
+header #welcome h2 img {
+    filter: drop-shadow(0.1em 0.1em 0.05em rgba(0,0,0,0.5));
+    margin-right: 0.2em;
+    height: 1em;
+    vertical-align: top;
+    width: auto;
 }
 
 header #actions {
@@ -322,7 +339,7 @@ section #primary h4 img {
 }
 
 section #primary article > img {
-    border-radius: 1em;
+    border-radius: 0.5em;
     box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.3);
     height: auto;
     margin: 0 auto;
@@ -388,5 +405,16 @@ section #secondary p:last-child {
 
 footer {
     font-size: 0.7em;
+    padding: 1em 0;
     text-align: center;
+}
+
+/* * * * * * * * *\
+ * Media Queries *
+\* * * * * * * * */
+
+@media screen and (orientation: portrait) {
+    section { flex-direction: column; }
+    section #primary > div { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); }
+    section #secondary #javascript { margin-top: 1em; }
 }
