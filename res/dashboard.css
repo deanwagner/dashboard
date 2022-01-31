@@ -32,9 +32,9 @@
     --dark-aside-svg-glow:     0 0 0.2em var(--dark-high-color);
     --dark-aside-text-glow:    0 0 0.2em var(--dark-high-color);
     --dark-action-box-shadow:  0.2em 0.2em 0.2em rgba(0,0,0,0.3);
-    --dark-action-text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.5);
-    --dark-action-box-glow:    0 0 0.2em var(--dark-special-color);
-    --dark-action-text-glow:   0 0 0.1em var(--dark-high-color);
+    --dark-action-text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.5);
+    --dark-action-box-glow:    0 0 0.5em var(--dark-special-color);
+    --dark-action-text-glow:   0 0 0.2em var(--dark-high-color);
 
     --base-transition: all 0.3s  ease-out;
     --fast-transition: all 0.15s ease-out;
@@ -58,6 +58,7 @@ html {
 
 body {
     align-items: stretch;
+    background-color: var(--medium-color);
     color: var(--low-color);
     display: flex;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -108,6 +109,7 @@ svg path {
 
 aside {
     background-color: var(--accent-color);
+    box-shadow: 0.2em 0 0.2em rgba(0,0,0,0.3);
     color: var(--high-color);
     text-shadow: var(--aside-text-shadow);
     transition: var(--base-transition);
@@ -212,7 +214,7 @@ aside.collapsed span {
 
 main {
     align-items: stretch;
-    background-color: var(--medium-color);
+    display: flex;
     flex: 1;
     flex-direction: column;
     justify-content: stretch;
@@ -243,6 +245,9 @@ header {
     background-color: var(--high-color);
     box-shadow: 0 0.2em 0.2em rgba(0,0,0,0.3);
     padding-bottom: 0.5em;
+    position: sticky;
+    top: -5.8em;
+    z-index: 2;
 }
 
 header > div {
@@ -262,8 +267,8 @@ header > div:last-child {
 header form {
     align-items: flex-start;
     background-color: var(--medium-color);
-    border-radius: 1.25em;
-    box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.3);
+    border-radius: 1.5em;
+    box-shadow: inset 0.2em 0.2em 0.2em rgba(0,0,0,0.3);
     display: flex;
     flex: 1;
     justify-content: flex-start;
@@ -275,14 +280,18 @@ header form {
 header form button {
     background-color: var(--medium-color);
     border: none;
-    height: 2em;
+    border-radius: 1em;
+    height: 3em;
 }
 
 header form input {
     background-color: var(--medium-color);
     border: none;
+    border-radius: 1em;
+    color: var(--accent-color);
     cursor: text;
     flex: 1;
+    font-size: 1.05em;
     height: 2em;
 }
 
@@ -530,8 +539,13 @@ footer {
  * Media Queries *
 \* * * * * * * * */
 
+@media screen and (max-width: 1200px) {
+    section #primary > div { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); }
+}
+
 @media screen and (orientation: portrait) {
     :root { --mobile-view: 1; }
+    header { top: -6.5em; }
     section { flex-direction: column; }
     section #primary > div { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); }
     section #secondary { padding: 0; }
