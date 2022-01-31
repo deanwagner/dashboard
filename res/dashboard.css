@@ -297,7 +297,7 @@ header form input {
     height: 2em;
 }
 
-*:focus {
+header form *:focus {
     outline: 1px dashed var(--special-color);
 }
 
