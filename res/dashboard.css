@@ -280,7 +280,7 @@ header form {
 }
 
 header form button {
-    background-color: var(--medium-color);
+    background-color: transparent;
     border: none;
     border-radius: 1.25em;
     height: 3em;
@@ -479,13 +479,6 @@ section #primary article p {
 
 section #primary article div {
     text-align: right;
-}
-
-section #primary article a:link,
-section #primary article a:visited,
-section #primary article a:hover,
-section #primary article a:focus,
-section #primary article a:active {
 }
 
 section #primary article a {
