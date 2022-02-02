@@ -62,7 +62,7 @@ body {
     color: var(--low-color);
     display: flex;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2vmin;
+    font-size: 12pt;
     justify-content: flex-start;
     margin: 0;
     min-height: 100vh;
@@ -274,7 +274,7 @@ header form {
     display: flex;
     flex: 1;
     justify-content: flex-start;
-    margin: 1.5em;
+    margin: 1.5em 0 1.5em 1.5em;
     overflow: hidden;
     padding: 0.4em;
 }
@@ -307,7 +307,7 @@ header form *:focus {
 \* * * * * * * * */
 
 header #controls {
-    margin: 1em;
+    margin: 1em 1em 1em 0;
 }
 
 header #controls a,
@@ -546,6 +546,8 @@ footer {
 @media screen and (orientation: portrait) {
     :root { --mobile-view: 1; }
     header { top: -6.5em; }
+    header > div:last-child { align-items: center; flex-direction: column; }
+    header #welcome, header #actions { margin: 0; text-align: center; }
     section { flex-direction: column; }
     section #primary > div { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); }
     section #secondary { padding: 0; }
