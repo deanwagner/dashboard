@@ -474,7 +474,6 @@ section #primary article > img {
 
 section #primary article p {
     flex: 1;
-    font-size: 0.8em;
 }
 
 section #primary article div {
@@ -530,7 +529,7 @@ section #secondary p:last-child {
 \* * * * * * * * */
 
 footer {
-    font-size: 0.7em;
+    font-size: 0.8em;
     padding: 1em 0;
     text-align: center;
 }
