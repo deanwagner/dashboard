@@ -276,7 +276,7 @@ header form {
     justify-content: flex-start;
     margin: 1.5em 0 1.5em 1.5em;
     overflow: hidden;
-    padding: 0.4em;
+    padding: 0 0.5em;
 }
 
 header form button {
@@ -284,6 +284,7 @@ header form button {
     border: none;
     border-radius: 1.25em;
     height: 3em;
+    margin: 0.1em 0 0;
 }
 
 header form input {
@@ -293,8 +294,9 @@ header form input {
     color: var(--accent-color);
     cursor: text;
     flex: 1;
-    font-size: 1.05em;
+    font-size: 1em;
     height: 2em;
+    margin: 0.3em 0 0;
 }
 
 header form *:focus {
