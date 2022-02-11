@@ -461,7 +461,7 @@ section #primary h4 img {
     filter: drop-shadow(0.1em 0.1em 0.05em rgba(0,0,0,0.8));
     height: 1em;
     margin-right: 0.2em;
-    vertical-align: bottom;
+    vertical-align: top;
     width: auto;
 }
 
