@@ -443,6 +443,10 @@ section article {
     padding: 1em;
 }
 
+/* * * * * * * * *\
+ *    Primary    *
+\* * * * * * * * */
+
 section #primary article {
     align-items: stretch;
     box-shadow:
@@ -452,10 +456,6 @@ section #primary article {
     flex-direction: column;
     justify-content: stretch;
 }
-
-/* * * * * * * * *\
- *    Primary    *
-\* * * * * * * * */
 
 section #primary h4 img {
     filter: drop-shadow(0.1em 0.1em 0.05em rgba(0,0,0,0.8));
