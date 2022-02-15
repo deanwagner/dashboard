@@ -556,8 +556,9 @@ footer {
     :root { --mobile-view: 1; }
     header { top: -7.2em; }
     header > div:last-child { align-items: center; flex-direction: column; }
+    header #controls a svg { margin-left: 0.2em; }
     header #welcome, header #actions { margin: 0; text-align: center; }
-    section { flex-direction: column; }
+    section { flex-direction: column; padding: 1em; }
     section #primary > div { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); }
     section #secondary { padding: 0; }
     section #secondary #javascript { margin-top: 1em; }
