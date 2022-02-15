@@ -554,7 +554,7 @@ footer {
 
 @media screen and (orientation: portrait) {
     :root { --mobile-view: 1; }
-    header { top: -6.5em; }
+    header { top: -7.2em; }
     header > div:last-child { align-items: center; flex-direction: column; }
     header #welcome, header #actions { margin: 0; text-align: center; }
     section { flex-direction: column; }
