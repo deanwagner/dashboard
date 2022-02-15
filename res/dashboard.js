@@ -309,8 +309,8 @@ class Dashboard {
 
     buildProject(p) {
         return `
-            <h4><a href="${p.live}"><img src="${p.icon}" alt="Project Icon">${p.name}</a></h4>
-            <img src="${p.img}" alt="Thumbnail Image">
+            <h4><a href="${p.live}"><img src="${p.icon}" alt="Project Icon" loading="lazy">${p.name}</a></h4>
+            <img src="${p.img}" alt="Thumbnail Image" loading="lazy">
             <p>${p.desc}</p>
             <div>
                 <a title="Live Version" href="${p.live}">
