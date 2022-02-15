@@ -177,7 +177,11 @@ aside nav a:active svg {
 
 aside svg {
     filter: drop-shadow(var(--aside-svg-shadow));
-    vertical-align: middle;
+    vertical-align: top;
+}
+
+aside nav svg {
+    margin-right: 1em;
 }
 
 aside svg path {
@@ -204,6 +208,10 @@ aside.collapsed h1 {
 aside.collapsed nav a {
     padding: 0 0 2em;
     text-align: center;
+}
+
+aside.collapsed nav svg {
+    margin: 0 auto;
 }
 
 aside.collapsed span {
