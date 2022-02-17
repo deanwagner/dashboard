@@ -450,18 +450,6 @@ section h4 {
     margin: 0 0 1em;
 }
 
-section #projects {
-    flex: 3;
-}
-
-section #projects > div {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-}
-
 section article {
     background-color: var(--high-color);
     border-radius: 1em;
@@ -473,6 +461,18 @@ section article {
 /* * * * * * * * *\
  *   Projects    *
 \* * * * * * * * */
+
+#projects {
+    flex: 3;
+}
+
+#projects > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+}
 
 #projects article {
     align-items: stretch;
