@@ -1,4 +1,17 @@
+
+/* * * * * * * * * * * *\
+ *   Admin Dashboard   *
+ *                     *
+ *  By: Dean Wagner    *
+ * info@deanwagner.net *
+ *                     *
+ *   Assignment for:   *
+ *  The Odin Project   *
+ * theodinproject.com  *
+\* * * * * * * * * * * */
+
 :root {
+    /* Default/Light Colors */
     --accent-color:  #2390cf;
     --special-color: #eeb241;
     --ceiling-color: #ffffff;
@@ -7,6 +20,7 @@
     --low-color:     #636262;
     --floor-color:   #000000;
 
+    /* Default/Light Shadows */
     --aside-svg-shadow:   0.1em 0.1em 0.1em rgba(0,0,0,1);
     --aside-text-shadow:  0.1em 0.1em 0.1em rgba(0,0,0,0.8);
     --aside-svg-glow:     0 0 0.3em var(--high-color);
@@ -16,9 +30,7 @@
     --action-box-glow:    0 0 0.2em var(--special-color);
     --action-text-glow:   0 0 0.1em var(--high-color);
 
-    --dark-mode: 0;
-    --mobile-view: 0;
-
+    /* Dark Mode Colors */
     --dark-accent-color:  #eeb241;
     --dark-special-color: #2390cf;
     --dark-ceiling-color: #ffffff;
@@ -27,6 +39,7 @@
     --dark-low-color:     #cccccc;
     --dark-floor-color:   #000000;
 
+    /* Dark Mode Shadows */
     --dark-aside-svg-shadow:   0.1em 0.1em 0.1em rgba(0,0,0,0.5);
     --dark-aside-text-shadow:  0.1em 0.1em 0.1em rgba(0,0,0,0.3);
     --dark-aside-svg-glow:     0 0 0.2em var(--dark-high-color);
@@ -36,9 +49,15 @@
     --dark-action-box-glow:    0 0 0.5em var(--dark-special-color);
     --dark-action-text-glow:   0 0 0.2em var(--dark-high-color);
 
+    /* Flags changed in Media Queries */
+    --dark-mode: 0;
+    --mobile-view: 0;
+
+    /* Transitions */
     --base-transition: all 0.3s  ease-out;
     --fast-transition: all 0.15s ease-out;
 
+    /* Browser Controls */
     color-scheme: light;
 }
 
@@ -188,7 +207,7 @@ aside svg path {
     fill: var(--high-color);
 }
 
-aside nav #settings {
+aside nav a[title='Settings'] {
     margin-top: 2em;
 }
 
