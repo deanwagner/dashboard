@@ -66,7 +66,7 @@ class Dashboard {
         img  : 'https://deanwagner.github.io/clock/img/clock-screenshot.png'
     }, {
         name : 'Sign-Up Form',
-        desc : 'A Sign-Up Form Mock-Up written in JavaScript and CSS.',
+        desc : 'A Sign-Up Form Mock-Up with Browser-Based Input Validation.',
         live : 'https://deanwagner.github.io/odin_project/signup/',
         repo : 'https://github.com/deanwagner/odin_project/tree/main/signup',
         icon : 'https://www.theodinproject.com/favicon-32x32.png',
