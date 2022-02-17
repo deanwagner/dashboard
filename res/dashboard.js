@@ -265,7 +265,7 @@ class Dashboard {
             article.innerHTML = this.buildProject(project);
             container.appendChild(article);
         });
-        document.getElementById('primary').appendChild(container);
+        document.getElementById('projects').appendChild(container);
 
         // Exercises
         const javascript  = document.getElementById('javascript');

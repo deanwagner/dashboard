@@ -450,11 +450,11 @@ section h4 {
     margin: 0 0 1em;
 }
 
-section #primary {
+section #projects {
     flex: 3;
 }
 
-section #primary > div {
+section #projects > div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -471,10 +471,10 @@ section article {
 }
 
 /* * * * * * * * *\
- *    Primary    *
+ *   Projects    *
 \* * * * * * * * */
 
-section #primary article {
+#projects article {
     align-items: stretch;
     box-shadow:
             inset 0.5em 0 0 var(--special-color),
@@ -484,7 +484,7 @@ section #primary article {
     justify-content: stretch;
 }
 
-section #primary h4 img {
+#projects h4 img {
     filter: drop-shadow(0.1em 0.1em 0.05em rgba(0,0,0,0.8));
     height: 1em;
     margin-right: 0.2em;
@@ -492,7 +492,7 @@ section #primary h4 img {
     width: auto;
 }
 
-section #primary article > img {
+#projects article > img {
     border-radius: 0.5em;
     box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.3);
     height: auto;
@@ -501,54 +501,54 @@ section #primary article > img {
     width: 100%;
 }
 
-section #primary article p {
+#projects article p {
     flex: 1;
 }
 
-section #primary article div {
+#projects article div {
     text-align: right;
 }
 
-section #primary article a {
+#projects article a {
     margin-left: 0.3em;
     text-decoration: none;
 }
 
-section #primary article svg {
+#projects article svg {
     height: 1.5em;
     width: 1.5em;
 }
 
 /* * * * * * * * *\
- *   Secondary   *
+ *   Exercises   *
 \* * * * * * * * */
 
-section #secondary {
+#exercises {
     flex: 1;
     padding-left: 1em;
 }
 
-section #secondary article {
+#exercises article {
     padding: 0.5em 1em;
 }
 
-section #secondary h4 {
+#exercises h4 {
     font-size: 0.9em;
     margin: 0;
 }
 
-section #secondary #stylesheets {
+#exercises #stylesheets {
     margin-top: 1em;
 }
 
-section #secondary p {
+#exercises p {
     border-bottom: 1px solid var(--medium-color);
     font-size: 0.7em;
     margin: 0.3rem 0 0.6rem;
     padding-bottom: 0.8rem;
 }
 
-section #secondary p:last-child {
+#exercises p:last-child {
     border-bottom: none;
     padding-bottom: 0;
 }
@@ -568,7 +568,7 @@ footer {
 \* * * * * * * * */
 
 @media screen and (max-width: 1200px) {
-    section #primary > div { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); }
+    #projects > div { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); }
 }
 
 @media screen and (orientation: portrait) {
@@ -578,9 +578,9 @@ footer {
     header #controls a svg { margin-left: 0.2em; }
     header #welcome, header #actions { margin: 0; text-align: center; }
     section { flex-direction: column; padding: 1em; }
-    section #primary > div { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); }
-    section #secondary { padding: 0; }
-    section #secondary #javascript { margin-top: 1em; }
+    #projects > div { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); }
+    #exercises { padding: 0; }
+    #exercises #javascript { margin-top: 1em; }
 }
 
 @media (prefers-color-scheme: dark) {
