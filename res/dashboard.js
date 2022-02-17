@@ -84,7 +84,7 @@ class Dashboard {
      *    Exercises    *
     \* * * * * * * * * */
 
-    // Exercises
+    // Javascript
     exercises = [{
         name : 'Caesar Cipher',
         desc : 'Encrypt/Decrypt messages using the Caesar Cipher.',
@@ -151,9 +151,7 @@ class Dashboard {
         link : 'https://github.com/deanwagner/odin_project/tree/main/javascript-exercises/01_helloWorld',
         type : 'js'
     },
-
-
-
+        // CSS
     {
         name : 'Grid Layout',
         desc : 'The Holy Grail Layout with Grid',
