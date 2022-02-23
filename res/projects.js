@@ -53,17 +53,17 @@ class Projects {
     }, {
         name : 'Sign-Up Form',
         desc : 'A Sign-Up Form Mock-Up with Browser-Based Input Validation.',
-        live : 'https://deanwagner.github.io/odin_project/signup/',
-        repo : 'https://github.com/deanwagner/odin_project/tree/main/signup',
+        live : 'https://deanwagner.github.io/signup/',
+        repo : 'https://github.com/deanwagner/signup',
         icon : 'https://www.theodinproject.com/favicon-32x32.png',
-        img  : 'https://deanwagner.github.io/odin_project/signup/img/signup-screenshot.png'
+        img  : 'https://deanwagner.github.io/signup/img/signup-screenshot.png'
     }, {
         name : 'Landing Page',
         desc : 'A Landing Page Mock-Up written in CSS and HTML.',
-        live : 'https://deanwagner.github.io/odin_project/landingpage/',
-        repo : 'https://github.com/deanwagner/odin_project/tree/main/landingpage',
+        live : 'https://deanwagner.github.io/landingpage/',
+        repo : 'https://github.com/deanwagner/landingpage',
         icon : 'https://www.theodinproject.com/favicon-32x32.png',
-        img  : 'https://deanwagner.github.io/odin_project/landingpage/img/landingpage-screenshot.png'
+        img  : 'https://deanwagner.github.io/landingpage/img/landingpage-screenshot.png'
     }];
 
     /**
