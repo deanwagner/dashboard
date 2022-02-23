@@ -16,15 +16,15 @@ class Projects {
         icon : 'https://deanwagner.github.io/calculator/img/calculator.svg',
         img  : 'https://deanwagner.github.io/calculator/img/calculator-screenshot.png'
     }, {
-        name : 'Paint App',
-        desc : 'A Paint-by-Pixel App written in JavaScript.',
+        name : 'Paint',
+        desc : 'A Paint-by-Pixel Image Creation App with save, export, and print abilities.',
         live : 'https://deanwagner.github.io/paint/',
         repo : 'https://github.com/deanwagner/paint',
         icon : 'https://deanwagner.github.io/paint/img/paint.png',
         img  : 'https://deanwagner.github.io/paint/img/paint-screenshot.png'
     }, {
-        name : 'Library App',
-        desc : 'Library app to store, track, and sort a book collection.',
+        name : 'Library',
+        desc : 'Library App to store, track, and sort a book collection.',
         live : 'https://deanwagner.github.io/library/',
         repo : 'https://github.com/deanwagner/library',
         icon : 'https://deanwagner.github.io/library/img/library.svg',
