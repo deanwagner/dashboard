@@ -88,6 +88,7 @@ body {
     margin: 0;
     min-height: 100vh;
     text-shadow: 0.05em 0.05em 0.2em rgba(0,0,0,0.4);
+    transition: var(--base-transition);
     padding: 0;
 }
 
@@ -278,6 +279,7 @@ header {
     padding-bottom: 0.5em;
     position: sticky;
     top: -5.8em;
+    transition: var(--base-transition);
     z-index: 2;
 }
 
@@ -306,6 +308,7 @@ header form {
     margin: 1.5em 0 1.5em 1.5em;
     overflow: hidden;
     padding: 0 0.5em;
+    transition: var(--base-transition);
 }
 
 header form button {
@@ -326,6 +329,7 @@ header form input {
     font-size: 1em;
     height: 2em;
     margin: 0.3em 0 0;
+    transition: var(--base-transition);
 }
 
 header form *:focus {
@@ -389,6 +393,7 @@ header #welcome h2 {
     margin: 0;
     padding: 0;
     text-shadow: 0.07em 0.07em 0.1em rgba(0,0,0,0.5);
+    transition: var(--base-transition);
     white-space: nowrap;
 }
 
@@ -458,6 +463,7 @@ section article {
     box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.3);
     margin: 0;
     padding: 1em;
+    transition: var(--base-transition);
 }
 
 /* * * * * * * * *\
@@ -505,6 +511,7 @@ section article {
 
 #projects article p {
     flex: 1;
+    transition: var(--base-transition);
 }
 
 #projects article div {
@@ -548,6 +555,7 @@ section article {
     font-size: 0.7em;
     margin: 0.3rem 0 0.6rem;
     padding-bottom: 0.8rem;
+    transition: var(--base-transition);
 }
 
 #exercises p:last-child {
@@ -563,6 +571,7 @@ footer {
     font-size: 0.8em;
     padding: 1em 0;
     text-align: center;
+    transition: var(--base-transition);
 }
 
 /* * * * * * * * *\
