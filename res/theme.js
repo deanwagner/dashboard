@@ -52,18 +52,22 @@ class Theme {
 
         // Get Values from CSS
         keys.forEach(value => {
-            this.light[value] = getComputedStyle(document.documentElement).getPropertyValue('--' + value);
-            this.dark[value]  = getComputedStyle(document.documentElement).getPropertyValue('--dark-' + value);
+            this.light[value] = this.getStyleProperty(value);
+            this.dark[value]  = this.getStyleProperty('dark-' + value);
         });
 
         // Auto-Load Dark Mode per User Settings
-        const isDark = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--dark-mode'));
+        const isDark = parseInt(this.getStyleProperty('dark-mode'));
         if (isDark) {
             this.darkMode.classList.add('off');
             this.lightMode.classList.remove('off');
             document.documentElement.style.setProperty('color-scheme', 'dark');
             this.changeMode(this.dark);
         }
+
+        // Enable Transitions
+        this.setStyleProperty('base-transition', this.getStyleProperty('base-enabled'));
+        this.setStyleProperty('fast-transition', this.getStyleProperty('fast-enabled'));
 
         /* * * * * * * * * *\
          * Event Listeners *
@@ -102,7 +106,7 @@ class Theme {
         });
 
         // Automatically Collapse Nav for Mobile Devices
-        const isMobile = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--mobile-view'));
+        const isMobile = parseInt(this.getStyleProperty('mobile-view'));
         if (isMobile) {
             aside.classList.add('collapsed');
         }
@@ -114,8 +118,28 @@ class Theme {
      */
     changeMode(colors) {
         for (let index in colors) {
-            document.documentElement.style.setProperty('--' + index, colors[index]);
+            this.setStyleProperty(index, colors[index]);
         }
+    }
+
+    /**
+     * Get CSS Property
+     * @param   {string} prop - Property
+     * @returns {string} - Value
+     */
+    getStyleProperty(prop) {
+        const property = (prop === 'color-scheme') ? prop : '--' + prop;
+        return getComputedStyle(document.documentElement).getPropertyValue(property).trim();
+    }
+
+    /**
+     * Set CSS Property
+     * @param {string} prop  - Property
+     * @param {string} value - Value
+     */
+    setStyleProperty(prop, value) {
+        const property = (prop === 'color-scheme') ? prop : '--' + prop;
+        document.documentElement.style.setProperty(property, value);
     }
 }
 

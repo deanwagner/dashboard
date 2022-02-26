@@ -54,8 +54,10 @@
     --mobile-view: 0;
 
     /* Transitions */
-    --base-transition: all 0.3s  ease-out;
-    --fast-transition: all 0.15s ease-out;
+    --base-transition: none;
+    --fast-transition: none;
+    --base-enabled:    all 0.3s  ease-out;
+    --fast-enabled:    all 0.15s ease-out;
 
     /* Browser Controls */
     color-scheme: light;
