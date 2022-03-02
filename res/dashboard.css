@@ -21,10 +21,8 @@
     --floor-color:   #000000;
 
     /* Default/Light Shadows */
-    --aside-svg-shadow:   0.1em 0.1em 0.1em rgba(0,0,0,1);
-    --aside-text-shadow:  0.1em 0.1em 0.1em rgba(0,0,0,0.8);
-    --aside-svg-glow:     0 0 0.3em var(--high-color);
-    --aside-text-glow:    0 0 0.2em var(--high-color);
+    --aside-shadow:       0.1em 0.1em 0.1em rgba(0,0,0,0.9);
+    --aside-glow:         0 0 0.1em var(--special-color);
     --action-box-shadow:  0.2em 0.2em 0.2em rgba(0,0,0,0.3);
     --action-text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,1);
     --action-box-glow:    0 0 0.2em var(--special-color);
@@ -40,10 +38,8 @@
     --dark-floor-color:   #000000;
 
     /* Dark Mode Shadows */
-    --dark-aside-svg-shadow:   0.1em 0.1em 0.1em rgba(0,0,0,0.5);
-    --dark-aside-text-shadow:  0.1em 0.1em 0.1em rgba(0,0,0,0.3);
-    --dark-aside-svg-glow:     0 0 0.2em var(--dark-high-color);
-    --dark-aside-text-glow:    0 0 0.2em var(--dark-high-color);
+    --dark-aside-shadow:       0.05em 0.05em 0.2em rgba(0,0,0,0.3);
+    --dark-aside-glow:         0 0 0.1em var(--dark-special-color);
     --dark-action-box-shadow:  0.2em 0.2em 0.2em rgba(0,0,0,0.3);
     --dark-action-text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.5);
     --dark-action-box-glow:    0 0 0.5em var(--dark-special-color);
@@ -133,17 +129,19 @@ aside {
     background-color: var(--accent-color);
     box-shadow: 0.2em 0 0.2em rgba(0,0,0,0.3);
     color: var(--high-color);
-    text-shadow: var(--aside-text-shadow);
+    text-shadow: var(--aside-shadow);
     transition: var(--base-transition);
     width: 15em;
 }
 
 aside h1 {
+    color: var(--high-color);
     cursor: pointer;
     position: sticky;
     margin: 0;
     padding: 0.5em 0 0.5em 0.5em;
     top: 0;
+    text-shadow: var(--aside-shadow);
     transition: var(--fast-transition);
     white-space: nowrap;
 }
@@ -153,16 +151,22 @@ aside h1 * {
 }
 
 aside h1 svg {
+    filter : drop-shadow(var(--aside-shadow));
     transition: var(--fast-transition);
     vertical-align: bottom;
 }
 
 aside h1:hover {
-    text-shadow: var(--aside-text-glow);
+    color: var(--special-color);
+    text-shadow: var(--aside-glow);
 }
 
 aside h1:hover svg {
-    filter: drop-shadow(var(--aside-svg-glow));
+    filter : drop-shadow(var(--aside-glow));
+}
+
+aside h1:hover svg path {
+    fill: var(--special-color);
 }
 
 aside nav {
@@ -173,6 +177,7 @@ aside nav {
 aside nav a {
     display: block;
     padding: 0 0 0.5em 2em;
+    text-shadow: var(--aside-shadow);
     transition: var(--fast-transition);
 }
 
@@ -180,25 +185,32 @@ aside nav a:link,
 aside nav a:visited {
     color: var(--high-color);
     text-decoration: none;
+    text-shadow: var(--aside-shadow);
 }
 
 aside nav a:hover,
 aside nav a:focus,
 aside nav a:active {
-    color: var(--high-color);
+    color: var(--special-color);
     text-decoration: none;
-    text-shadow: var(--aside-text-glow);
+    text-shadow: var(--aside-glow);
     transform: scale(1.1);
 }
 
 aside nav a:hover svg,
 aside nav a:focus svg,
 aside nav a:active svg {
-    filter: drop-shadow(var(--aside-svg-glow));
+    filter: drop-shadow(var(--aside-glow));
+}
+
+aside nav a:hover svg path,
+aside nav a:focus svg path,
+aside nav a:active svg path {
+    fill: var(--special-color);
 }
 
 aside svg {
-    filter: drop-shadow(var(--aside-svg-shadow));
+    filter: drop-shadow(var(--aside-shadow));
     vertical-align: top;
 }
 
@@ -309,6 +321,10 @@ header form {
     overflow: hidden;
     padding: 0 0.5em;
     transition: var(--base-transition);
+}
+
+header form label {
+    display: none;
 }
 
 header form button {
