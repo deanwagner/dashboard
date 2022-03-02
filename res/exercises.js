@@ -126,6 +126,21 @@ class Exercises {
         desc : 'Centering with Flexbox',
         link : 'https://github.com/deanwagner/odin_project/tree/main/css-exercises/flex/01-flex-center',
         type : 'css'
+    }, {
+        name : 'Pop-Up Modal',
+        desc : 'Pop-Up Modal Activated on Button Click',
+        link : 'https://github.com/deanwagner/odin_project/tree/main/css-exercises/animation/03-pop-up/',
+        type : 'css'
+    }, {
+        name : 'Drop-Down Menu',
+        desc : 'Drop-Down Menu Activated on Hover',
+        link : 'https://github.com/deanwagner/odin_project/tree/main/css-exercises/animation/02-drop-down',
+        type : 'css'
+    }, {
+        name : 'Button Hover',
+        desc : 'Change Text Size on Hover',
+        link : 'https://github.com/deanwagner/odin_project/tree/main/css-exercises/animation/01-button-hover',
+        type : 'css'
     }];
 
     /**
