@@ -30,6 +30,13 @@ class Projects {
         icon : 'https://deanwagner.github.io/library/img/library.svg',
         img  : 'https://deanwagner.github.io/library/img/library-screenshot.png'
     }, {
+        name : 'T O D O :',
+        desc : 'A To-Do List and Task Tracker.',
+        live : 'https://deanwagner.github.io/todo/',
+        repo : 'https://github.com/deanwagner/todo',
+        icon : 'https://deanwagner.github.io/todo/img/todo.svg',
+        img  : 'https://deanwagner.github.io/todo/img/todo-pc-dark.png'
+    }, {
         name : 'Tic Tac Toe',
         desc : 'A Tic Tac Toe game with an intelligent AI opponent.',
         live : 'https://deanwagner.github.io/tic-tac-toe/',
@@ -43,13 +50,6 @@ class Projects {
         repo : 'https://github.com/deanwagner/rock-paper-scissors',
         icon : 'https://deanwagner.github.io/rock-paper-scissors/img/scissors.svg',
         img  : 'https://deanwagner.github.io/rock-paper-scissors/img/rps-screenshot.png'
-    }, {
-        name : 'Clock',
-        desc : 'An Animated Clock written in JavaScript and CSS.',
-        live : 'https://deanwagner.github.io/clock/',
-        repo : 'https://github.com/deanwagner/clock',
-        icon : 'https://deanwagner.github.io/clock/res/clock.png',
-        img  : 'https://deanwagner.github.io/clock/img/clock-screenshot.png'
     }, {
         name : 'Sign-Up Form',
         desc : 'A Sign-Up Form Mock-Up with Browser-Based Input Validation.',
@@ -65,6 +65,16 @@ class Projects {
         icon : 'https://www.theodinproject.com/favicon-32x32.png',
         img  : 'https://deanwagner.github.io/landingpage/img/landingpage-screenshot.png'
     }];
+
+    /*
+        name : 'Clock',
+        desc : 'An Animated Clock written in JavaScript and CSS.',
+        live : 'https://deanwagner.github.io/clock/',
+        repo : 'https://github.com/deanwagner/clock',
+        icon : 'https://deanwagner.github.io/clock/res/clock.png',
+        img  : 'https://deanwagner.github.io/clock/img/clock-screenshot.png'
+    }, {
+    */
 
     /**
      * Constructor
