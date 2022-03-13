@@ -20,7 +20,7 @@ This project was created for the [Admin Dashboard assignment](https://www.theodi
 ### Objectives
 
 1. Build a page based on the Provided Assets
-2. (+1) Make it Responsive
+2. (+) Make it Responsive
 
 ### Scope Creep
 
