@@ -22,7 +22,7 @@
 
     /* Default/Light Shadows */
     --aside-shadow:       0.1em 0.1em 0.1em rgba(0,0,0,0.9);
-    --aside-glow:         0 0 0.1em var(--special-color);
+    --aside-glow:         0 0 0.1em var(--high-color);
     --action-box-shadow:  0.2em 0.2em 0.2em rgba(0,0,0,0.3);
     --action-text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,1);
     --action-box-glow:    0 0 0.2em var(--special-color);
@@ -39,7 +39,7 @@
 
     /* Dark Mode Shadows */
     --dark-aside-shadow:       0.05em 0.05em 0.2em rgba(0,0,0,0.3);
-    --dark-aside-glow:         0 0 0.1em var(--dark-special-color);
+    --dark-aside-glow:         0 0 0.1em var(--dark-high-color);
     --dark-action-box-shadow:  0.2em 0.2em 0.2em rgba(0,0,0,0.3);
     --dark-action-text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.5);
     --dark-action-box-glow:    0 0 0.5em var(--dark-special-color);
@@ -157,7 +157,7 @@ aside h1 svg {
 }
 
 aside h1:hover {
-    color: var(--special-color);
+    color: var(--high-color);
     text-shadow: var(--aside-glow);
 }
 
@@ -166,7 +166,7 @@ aside h1:hover svg {
 }
 
 aside h1:hover svg path {
-    fill: var(--special-color);
+    fill: var(--high-color);
 }
 
 aside nav {
@@ -191,7 +191,7 @@ aside nav a:visited {
 aside nav a:hover,
 aside nav a:focus,
 aside nav a:active {
-    color: var(--special-color);
+    color: var(--high-color);
     text-decoration: none;
     text-shadow: var(--aside-glow);
     transform: scale(1.1);
@@ -206,7 +206,7 @@ aside nav a:active svg {
 aside nav a:hover svg path,
 aside nav a:focus svg path,
 aside nav a:active svg path {
-    fill: var(--special-color);
+    fill: var(--high-color);
 }
 
 aside svg {
