@@ -9,6 +9,20 @@
 class Projects {
 
     projects = [{
+        name : 'Portfolio',
+        desc : 'Portfolio Project which highlights achievements from The Odin Project curriculum.',
+        live : 'https://deanwagner.github.io/portfolio/',
+        repo : 'https://github.com/deanwagner/portfolio',
+        icon : 'https://deanwagner.github.io/portfolio/img/portfolio.svg',
+        img  : 'https://deanwagner.github.io/portfolio/img/portfolio-screenshot-light.png'
+    }, {
+        name : 'Weather',
+        desc : 'Local Weather Conditions and 7-Day Forecast App with customizable settings and weather-based themes.',
+        live : 'https://deanwagner.github.io/weather/',
+        repo : 'https://github.com/deanwagner/weather',
+        icon : 'https://deanwagner.github.io/weather/img/weather.svg',
+        img  : 'https://deanwagner.github.io/weather/img/weather-screenshot.png'
+    }, {
         name : 'LCD Calculator',
         desc : 'An LCD Calculator App written in JavaScript with an SVG display.',
         live : 'https://deanwagner.github.io/calculator/',
