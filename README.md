@@ -4,9 +4,7 @@
 Live Demo:  
 https://deanwagner.github.io/dashboard/
 
-![Project Screenshot](https://deanwagner.github.io/dashboard/img/dashboard-pc-light.png)
-
-![Project Screenshot](https://deanwagner.github.io/dashboard/img/dashboard-pc-dark.png)
+![Project Screenshot](https://deanwagner.github.io/dashboard/img/dashboard-pc-light.png) ![Project Screenshot](https://deanwagner.github.io/dashboard/img/dashboard-pc-dark.png)
 
 ![Project Screenshot](https://deanwagner.github.io/dashboard/img/dashboard-mobile-light.png) ![Project Screenshot](https://deanwagner.github.io/dashboard/img/dashboard-mobile-dark.png)
 
