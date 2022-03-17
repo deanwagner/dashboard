@@ -4,8 +4,10 @@
 Live Demo:  
 https://deanwagner.github.io/dashboard/
 
+PC View:  
 ![Project Screenshot](https://deanwagner.github.io/dashboard/img/dashboard-pc-light.png) ![Project Screenshot](https://deanwagner.github.io/dashboard/img/dashboard-pc-dark.png)
 
+Mobile View:  
 ![Project Screenshot](https://deanwagner.github.io/dashboard/img/dashboard-mobile-light.png) ![Project Screenshot](https://deanwagner.github.io/dashboard/img/dashboard-mobile-dark.png)
 
 This project was created for the [Admin Dashboard assignment](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css/lessons/admin-dashboard) as part of [The Odin Project](https://www.theodinproject.com) curriculum. I met all the assignment objectives and then expanded on it with my own concepts to make it more functional and user-friendly.
